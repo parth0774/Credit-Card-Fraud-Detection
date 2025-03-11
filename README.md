@@ -59,6 +59,71 @@ The dataset includes:
   - Amount: Transaction amount
   - Class: Target variable (1 for fraud, 0 for legitimate)
 
+  ## 4. Methodology
+
+### 4.1 Data Preprocessing
+
+#### 4.1.1 Feature Scaling
+
+The features in our dataset exhibit varied scales. While the V1-V28 features are already normalized as PCA components, the 'Time' and 'Amount' features require scaling:
+
+```python
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+```
+
+This normalization process ensures that all features contribute equally to the model training process and prevents features with larger scales from dominating the gradient updates.
+
+#### 4.1.2 Train-Test Split
+
+We employed a stratified sampling approach to maintain the class distribution in both training and testing sets:
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
+```
+
+The stratification is critical given the extreme class imbalance, as it ensures that both sets contain representative samples of the minority class.
+
+#### 4.1.3 Handling Class Imbalance with SMOTE
+
+To address the class imbalance, we applied Synthetic Minority Over-sampling Technique (SMOTE), which creates synthetic examples of the minority class:
+
+```python
+smote = SMOTE(random_state=42)
+X_train_resampled, y_train_resampled = smote.fit_resample(X_train_scaled, y_train)
+```
+
+SMOTE was chosen over simple oversampling to avoid the risk of overfitting that comes with duplicate samples. By creating synthetic examples based on nearest neighbors, SMOTE generates more diverse examples of the minority class, enabling the model to learn more generalizable patterns of fraudulent behavior.
+
+### 4.2 Neural Network Architecture
+
+We designed a custom neural network architecture with specific features to address the challenges of fraud detection:
+
+```python
+model = Sequential([
+    # Input layer
+    Dense(64, activation='relu', input_shape=(X_train_resampled.shape[1],)),
+    BatchNormalization(),
+    Dropout(0.3),
+    
+    # Hidden layers
+    Dense(32, activation='relu'),
+    BatchNormalization(),
+    Dropout(0.3),
+    
+    Dense(16, activation='relu'),
+    BatchNormalization(),
+    Dropout(0.3),
+    
+    # Output layer
+    Dense(1, activation='sigmoid')
+])
+```
+
+
 
 
 
