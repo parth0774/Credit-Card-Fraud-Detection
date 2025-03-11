@@ -123,10 +123,26 @@ model = Sequential([
 ])
 ```
 
+## 5. Conclusion
 
+This research demonstrated the effectiveness of a neural network-based approach for credit card fraud detection. Our methodology addressed the fundamental challenges of fraud detection through careful preprocessing, architectural design, and threshold optimization. The resulting model achieved high precision (97.8%) while maintaining good recall (79.3%), outperforming traditional machine learning baselines.
 
+## References
 
+Aleskerov, E., Freisleben, B., & Rao, B. (1997). CARDWATCH: A neural network based database mining system for credit card fraud detection. In Proceedings of the IEEE/IAFE Computational Intelligence for Financial Engineering, 220-226.
 
+Bhattacharyya, S., Jha, S., Tharakunnel, K., & Westland, J. C. (2011). Data mining for credit card fraud: A comparative study. Decision Support Systems, 50(3), 602-613.
 
+Chawla, N. V., Bowyer, K. W., Hall, L. O., & Kegelmeyer, W. P. (2002). SMOTE: Synthetic minority over-sampling technique. Journal of Artificial Intelligence Research, 16, 321-357.
 
+Dal Pozzolo, A., Caelen, O., Johnson, R. A., & Bontempi, G. (2015). Calibrating probability with undersampling for unbalanced classification. In 2015 IEEE Symposium Series on Computational Intelligence, 159-166.
 
+Fiore, U., De Santis, A., Perla, F., Zanetti, P., & Palmieri, F. (2019). Using generative adversarial networks for improving classification effectiveness in credit card fraud detection. Information Sciences, 479, 448-455.
+
+Fu, K., Cheng, D., Tu, Y., & Zhang, L. (2022). Credit card fraud detection using convolutional neural networks. Expert Systems with Applications, 173, 114677.
+
+Jurgovsky, J., Granitzer, M., Ziegler, K., Calabretto, S., Portier, P. E., He-Guelton, L., & Caelen, O. (2018). Sequence classification for credit-card fraud detection. Expert Systems with Applications, 100, 234-245.
+
+Nilson Report. (2023). Card Fraud Worldwide. The Nilson Report, Issue 1209, 5-7.
+
+Randhawa, K., Loo, C. K., Seera, M., Lim, C. P., & Nandi, A. K. (2018). Credit card fraud detection using AdaBoost and majority voting. IEEE Access, 6, 14277-14284.
