@@ -24,3 +24,24 @@ Credit card fraud detection presents several unique challenges:
 
 This research addresses these challenges by implementing a neural network-based approach that leverages advanced preprocessing techniques and architectural choices specifically designed for imbalanced classification problems.
 
+## 2. Literature Review
+
+### 2.1 Traditional Approaches
+
+Early fraud detection systems relied primarily on rule-based approaches, employing predefined thresholds and patterns to flag suspicious transactions (Aleskerov et al., 1997). While simple to implement and interpret, these systems lacked the flexibility to adapt to new fraud patterns.
+
+### 2.2 Statistical and Machine Learning Approaches
+
+Statistical methods, including logistic regression and decision trees, represented the next generation of fraud detection (Bhattacharyya et al., 2011). These approaches demonstrated improved performance but struggled with highly imbalanced datasets and complex nonlinear relationships.
+
+### 2.3 Deep Learning for Fraud Detection
+
+Recent years have witnessed increasing adoption of deep learning techniques for fraud detection. Comparative studies by Fiore et al. (2019) and Jurgovsky et al. (2018) demonstrated that neural networks can outperform traditional machine learning algorithms when properly configured for the task. Fu et al. (2022) highlighted the importance of appropriate preprocessing and architectural choices when applying deep learning to imbalanced classification problems like fraud detection.
+
+### 2.4 Handling Class Imbalance
+
+Various techniques have been proposed to address class imbalance in fraud detection:
+
+- **Resampling Methods**: SMOTE (Synthetic Minority Over-sampling Technique) and its variants have shown promise in creating balanced training datasets (Chawla et al., 2002).
+- **Cost-Sensitive Learning**: Adjusting the loss function to penalize misclassification of minority class samples more heavily (Dal Pozzolo et al., 2015).
+- **Ensemble Methods**: Combining multiple models trained on different subsets of the data to improve generalization (Randhawa et al., 2018).
