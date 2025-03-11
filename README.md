@@ -45,3 +45,23 @@ Various techniques have been proposed to address class imbalance in fraud detect
 - **Resampling Methods**: SMOTE (Synthetic Minority Over-sampling Technique) and its variants have shown promise in creating balanced training datasets (Chawla et al., 2002).
 - **Cost-Sensitive Learning**: Adjusting the loss function to penalize misclassification of minority class samples more heavily (Dal Pozzolo et al., 2015).
 - **Ensemble Methods**: Combining multiple models trained on different subsets of the data to improve generalization (Randhawa et al., 2018).
+
+## 3. Dataset Description
+
+### 3.1 Data Source and Structure
+
+The dataset includes:
+
+- 284807 transactions with 492 fraud transactions.
+- 31 features including:
+  - Time: Number of seconds elapsed between this transaction and the first transaction
+  - V1-V28: Principal components obtained from an undisclosed transformation to protect user identities and sensitive features
+  - Amount: Transaction amount
+  - Class: Target variable (1 for fraud, 0 for legitimate)
+
+
+
+
+
+
+
