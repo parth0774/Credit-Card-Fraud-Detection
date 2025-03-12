@@ -50,6 +50,8 @@ Various techniques have been proposed to address class imbalance in fraud detect
 
 ### 3.1 Data Source and Structure
 
+Dataset Source :- https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
 The dataset includes:
 
 - 284807 transactions with 492 fraud transactions.
