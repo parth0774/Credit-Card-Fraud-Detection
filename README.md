@@ -122,7 +122,7 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 ```
-
+![Model Training History](Images/training_history.png)
 
 ## 5. Conclusion
 
