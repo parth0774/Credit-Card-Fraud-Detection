@@ -123,6 +123,7 @@ model = Sequential([
 ])
 ```
 
+
 ## 5. Conclusion
 
 This research demonstrated the effectiveness of a neural network-based approach for credit card fraud detection. Our methodology addressed the fundamental challenges of fraud detection through careful preprocessing, architectural design, and threshold optimization. The resulting model achieved high precision (97.8%) while maintaining good recall (79.3%), outperforming traditional machine learning baselines.
